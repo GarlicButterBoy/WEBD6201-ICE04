@@ -165,7 +165,7 @@ let myContact =
         for (const key of keys)
         {
           console.log(key);
-          let contactData = localStorage.getItem((key).toString());
+          let contactData = localStorage.getItem((index + 1).toString());
 
           console.log(contactData);
 
@@ -191,7 +191,7 @@ let myContact =
           console.log($(this)[0].value);
         });
 
-        
+        //TODO: Need to fix this item - breaks when deleting a non-last id number
         $("button.delete").on("click", function()
         {
           if(confirm("Are you sure?"))

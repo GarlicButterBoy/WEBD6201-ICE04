@@ -165,24 +165,15 @@ let myContact =
         for (const key of keys)
         {
           console.log(key);
-          let contactData = localStorage.getItem((key).toString());
-
-          console.log(contactData);
-
-          let contact = new core.Contact();
-          contact.deserialize(contactData);
-
-          data += `<tr>
-                  <th scope="row">${key}</th>
-                  <td>${contact.FullName}</td>
-                  <td>${contact.ContactNumber}</td>
-                  <td>${contact.EmailAddress}</td>
-                  <td class="text-center"><button class="btn btn-primary btn-sm edit" value="${key}"><i class="fas fa-sm fa-edit"></i> Edit</button></td>
-                  <td class="text-center"><button class="btn btn-warning btn-sm delete" value="${key}"><i class="fas fa-sm fa-trash-alt"></i> Delete</button></td>
-                  </tr>`;
-          
         }
+        
 
+
+        for (let index = 0; index < localStorage.length; index++)
+        {
+          
+
+        }
 
         contactList.innerHTML = data;
         //TODO: Create an Edit page
@@ -191,7 +182,7 @@ let myContact =
           console.log($(this)[0].value);
         });
 
-        
+        //TODO: Need to fix this item - breaks when deleting a non-last id number
         $("button.delete").on("click", function()
         {
           if(confirm("Are you sure?"))

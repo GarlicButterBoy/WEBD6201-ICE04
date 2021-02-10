@@ -191,7 +191,7 @@ let myContact =
           console.log($(this)[0].value);
         });
 
-        
+        //TODO: Need to fix this item - breaks when deleting a non-last id number
         $("button.delete").on("click", function()
         {
           if(confirm("Are you sure?"))
