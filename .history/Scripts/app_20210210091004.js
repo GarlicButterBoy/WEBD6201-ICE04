@@ -139,7 +139,7 @@ let myContact =
             {
               let key = contact.FullName.substring(0, 1) + Date.now();
 
-              localStorage.setItem(key, contact.serialize());
+              localStorage.setItem(key.toString(), contact.serialize());
             }
           }
         });
@@ -187,11 +187,14 @@ let myContact =
           index++;
         }
 
+
         contactList.innerHTML = data;
         //TODO: Create an Edit page
         $("button.edit").on("click", function()
         {
           location.href = "edit.html#" + $(this).val();
+
+
         });
 
         
@@ -200,8 +203,9 @@ let myContact =
           if(confirm("Are you sure?"))
           {
             localStorage.removeItem($(this).val());
+            location.href = "contact-list.html";
           }
-          location.href = "contact-list.html";
+
         });
       }
 
@@ -217,37 +221,28 @@ let myContact =
       //Simple check to ensure the key is not empty
       if(key != "")
       {
-        //get contact info from localStorage
         contact.deserialize(localStorage.getItem(key));
-        //Display contact info
-        $("#fullName").val(contact.FullName);
-        $("#contactNumber").val(contact.ContactNumber);
-        $("#emailAddress").val(contact.EmailAddress);
+        $("#fullName").val(contact.fullName);
+        $("$#contactNumber").val(contact.contactNumber);
+        $("#emailAddress").val(contact.emailAddress);
       }
-      //Edit Button
+
       $("#editButton").on("click", function()
       {
-        //If key is empty, make new one
         if (key == "")
         {
           key = contact.FullName.substring(0, 1) + Date.now();
         }
 
-        //Update the contact info using the newly typed data
         contact.FullName = $("#fullName").val();
-        contact.ContactNumber = $("#contactNumber").val();
-        contact.EmailAddress = $("#emailAddress").val();
+        contact.FullName = $("#fullName").val();
+        contact.FullName = $("#fullName").val();
 
-        //Update localStorage
-        localStorage.setItem(key, contact.serialize());
-
-        //Navigate back to the contact-list.html
-        location.href = "contact-list.html";
+        
       });
-      //Cancel Button
+
       $("#cancelButton").on("click", function()
       {
-        //return to contact-list.html
         location.href = "contact-list.html";
       });
 

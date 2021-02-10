@@ -187,11 +187,14 @@ let myContact =
           index++;
         }
 
+
         contactList.innerHTML = data;
         //TODO: Create an Edit page
         $("button.edit").on("click", function()
         {
           location.href = "edit.html#" + $(this).val();
+
+
         });
 
         

@@ -187,11 +187,14 @@ let myContact =
           index++;
         }
 
+
         contactList.innerHTML = data;
         //TODO: Create an Edit page
         $("button.edit").on("click", function()
         {
           location.href = "edit.html#" + $(this).val();
+
+
         });
 
         
@@ -200,8 +203,9 @@ let myContact =
           if(confirm("Are you sure?"))
           {
             localStorage.removeItem($(this).val());
+            location.href = "contact-list.html";
           }
-          location.href = "contact-list.html";
+
         });
       }
 
