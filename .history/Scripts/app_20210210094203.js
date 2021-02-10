@@ -134,7 +134,7 @@ let myContact =
         {
           if ($("#subscribeCheckbox")[0].checked)
           {
-            let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
+            let contact = new core.Contact(fullName.value, contactNumber.value, EmailAddress.value);
             if(contact.serialize()) //checking if the serialized object exists
             {
               let key = contact.FullName.substring(0, 1) + Date.now();

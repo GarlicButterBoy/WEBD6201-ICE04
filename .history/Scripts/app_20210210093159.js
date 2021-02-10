@@ -130,11 +130,11 @@ let myContact =
         //let fullName = document.getElementById("fullName");
         //fullName.addEventListener("blur", function() {});
 
-        $("#sendButton").on("click", (event)=>
+        $("#sendButton").on("click", ()=>
         {
           if ($("#subscribeCheckbox")[0].checked)
           {
-            let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
+            let contact = new core.Contact(FullName.value, ContactNumber.value, EmailAddress.value);
             if(contact.serialize()) //checking if the serialized object exists
             {
               let key = contact.FullName.substring(0, 1) + Date.now();
@@ -232,9 +232,7 @@ let myContact =
       else
       {
         //modify the page so its an add, not an edit
-        $("main>h1").text("Add Contact");
-        $("#editButton").html(`<i class="fas fa-plus-square fa-lg"></i> Add`)
-
+        $("main>h1").textContent
       }
 
       //Edit Button
