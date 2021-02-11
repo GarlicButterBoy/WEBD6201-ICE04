@@ -210,12 +210,11 @@ let myContact =
       TestEmailAddress();
 
       //Edit Button
-      $("#editButton").one("click", function()
+      $("#editButton").on("click", function()
       {
-
-        if (document.forms[0].checkValidity()) 
-        {
-          //If key is empty, make new one
+        
+       if () 
+        //If key is empty, make new one
         if (key == "")
         {
           key = contact.FullName.substring(0, 1) + Date.now();
@@ -228,10 +227,9 @@ let myContact =
 
         //Update localStorage
         localStorage.setItem(key, contact.serialize());
-         //Navigate back to the contact-list.html
-         location.href = "contact-list.html";
-        }
 
+        //Navigate back to the contact-list.html
+        location.href = "contact-list.html";
       });
       //Cancel Button
       $("#cancelButton").on("click", function()

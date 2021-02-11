@@ -210,7 +210,7 @@ let myContact =
       TestEmailAddress();
 
       //Edit Button
-      $("#editButton").one("click", function()
+      $("#editButton").on("click", function()
       {
 
         if (document.forms[0].checkValidity()) 

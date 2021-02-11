@@ -210,7 +210,7 @@ let myContact =
       TestEmailAddress();
 
       //Edit Button
-      $("#editButton").one("click", function()
+      $("#editButton").on("click", function()
       {
 
         if (document.forms[0].checkValidity()) 
@@ -229,7 +229,7 @@ let myContact =
         //Update localStorage
         localStorage.setItem(key, contact.serialize());
          //Navigate back to the contact-list.html
-         location.href = "contact-list.html";
+         //location.href = "contact-list.html";
         }
 
       });
