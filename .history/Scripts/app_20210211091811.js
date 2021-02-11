@@ -119,6 +119,7 @@ let myContact =
             }
           }
         });
+
     }
     function displayContactList()
     {

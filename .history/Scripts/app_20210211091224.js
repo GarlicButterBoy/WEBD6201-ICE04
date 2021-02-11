@@ -99,9 +99,7 @@ let myContact =
 
     function displayContact()
     {
-        TestFullName();
-        TestContactNumber();
-        TestEmailAddress();
+        
         
         //let fullName = document.getElementById("fullName");
         //fullName.addEventListener("blur", function() {});
@@ -119,6 +117,16 @@ let myContact =
             }
           }
         });
+
+        //let sendButton = document.getElementById("sendButton");
+        //sendButton.addEventListener("click", function(event){
+            
+            //event.preventDefault();
+            //console.log(contact.serialize());
+            //fullName.value = "";
+            //contactNumber.value = "";
+            //emailAddress.value = "";
+        //});
     }
     function displayContactList()
     {
@@ -234,7 +242,6 @@ let myContact =
 
     function TestContactNumber()
     {
-      let messageArea = $("#messageArea");
       let contactNumberPattern = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
       // form validation
       $("#contactNumber").on("blur", function() 
@@ -259,27 +266,7 @@ let myContact =
 
     function TestEmailAddress()
     {
-      let messageArea = $("#messageArea");
-      let emailAddressPattern = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
-      // form validation
-      $("#emailAddress").on("blur", function() 
-      {
-  
 
-        if(!emailAddressPattern.test($(this).val()))
-          {
-              //JQuery example of the lines below
-             $(this).trigger("focus").trigger("select");
-             messageArea.show().addClass("alert alert-danger").text("Please enter a valid email address.");
-          }
-          else
-          {
-             //JQuery example of the line below
-              messageArea.removeAttr("class").hide();
-             //messageArea.hidden = true;
-             //messageArea.removeAttribute("class");
-          }
-      });
     }
 
     function TestFullName()

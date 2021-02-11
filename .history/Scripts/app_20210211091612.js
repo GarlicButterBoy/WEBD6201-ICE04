@@ -119,6 +119,16 @@ let myContact =
             }
           }
         });
+
+        //let sendButton = document.getElementById("sendButton");
+        //sendButton.addEventListener("click", function(event){
+            
+            //event.preventDefault();
+            //console.log(contact.serialize());
+            //fullName.value = "";
+            //contactNumber.value = "";
+            //emailAddress.value = "";
+        //});
     }
     function displayContactList()
     {

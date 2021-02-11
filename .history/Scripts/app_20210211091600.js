@@ -119,6 +119,16 @@ let myContact =
             }
           }
         });
+
+        //let sendButton = document.getElementById("sendButton");
+        //sendButton.addEventListener("click", function(event){
+            
+            //event.preventDefault();
+            //console.log(contact.serialize());
+            //fullName.value = "";
+            //contactNumber.value = "";
+            //emailAddress.value = "";
+        //});
     }
     function displayContactList()
     {
@@ -270,7 +280,7 @@ let myContact =
           {
               //JQuery example of the lines below
              $(this).trigger("focus").trigger("select");
-             messageArea.show().addClass("alert alert-danger").text("Please enter a valid email address.");
+             messageArea.show().addClass("alert alert-danger").text("Please enter a valid phone number.");
           }
           else
           {
