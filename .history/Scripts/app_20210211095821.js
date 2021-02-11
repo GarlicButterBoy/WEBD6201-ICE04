@@ -320,11 +320,6 @@ let myContact =
 
   function displayLogin()
   {
-
-  }
-
-  function displayRegister()
-  {
     
   }
 

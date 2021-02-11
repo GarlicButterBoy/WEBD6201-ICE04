@@ -318,16 +318,6 @@ let myContact =
       });
   }
 
-  function displayLogin()
-  {
-
-  }
-
-  function displayRegister()
-  {
-    
-  }
-
     function Start()
     {
         console.log("App Started...");
@@ -358,11 +348,11 @@ let myContact =
           case "Edit":
               displayEdit();    
             break;
-          case "Login":
-              displayLogin();    
+          case "Edit":
+              displayEdit();    
             break;
-          case "Register":
-              displayRegister();    
+          case "Edit":
+              displayEdit();    
             break;
         }
         
